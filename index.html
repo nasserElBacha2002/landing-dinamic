@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dinamic Education - Cursos personalizados y semi-personalizados de desarrollo.">
+    <title>Dynamic Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #77B093;
+            --dark-green: #508347;
+            --light-gray-green: #C5D1CD;
+            --medium-gray-green: #B9C9C0;
+        }
+        .bg-primary-green { background-color: var(--primary-green); }
+        .text-dark-green { color: var(--dark-green); }
+        .hover-light-gray-green:hover { color: var(--light-gray-green); }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="bg-light-gray-green text-gray-800">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <div id="hero"></div>
+
+    <!-- Modalities Section -->
+    <div id="modalities"></div>
+
+    <!-- Advantages Section -->
+    <div id="advantages"></div>
+
+
+    <!-- Courses Section -->
+    <div id="courses"></div>
+
+    <!-- Mission Section -->
+    <div id="mission"></div>
+
+    <!-- Contact Section -->
+    <div id="contact"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+        // Dynamically load sections
+        const sections = [
+            'header', 'hero', 'modalities', 'advantages', 'courses', 'mission', 'contact', 'footer'
+        ];
+
+        sections.forEach(section => {
+            fetch(`${section}.html`)
+                .then(response => response.text())
+                .then(data => document.getElementById(section).innerHTML = data)
+                .catch(error => console.error(`Error loading ${section}:`, error));
+        });
+    </script>
+</body>
+</html>

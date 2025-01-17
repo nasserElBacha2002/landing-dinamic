@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dinamic Education - Cursos personalizados y semi-personalizados de desarrollo.">
-    <title>Dynamic Education</title>
+    <meta name="description" content="Descubre Dinamic Education: Cursos personalizados y semi-personalizados en desarrollo web, programación y más.">
+    <meta name="keywords" content="Cursos de programación, Desarrollo web, Backend, Frontend, Clases online">
+    <meta name="author" content="Dinamic Education">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dinamic Education - Aprende y Transforma tu Futuro">
+    <meta property="og:description" content="Accede a educación personalizada con nuestros cursos prácticos y modernos. ¡Inscríbete hoy!">
+    <meta property="og:image" content="/assets/images/social-preview.jpg">
+    <meta property="og:url" content="https://dinamic-education.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dinamic Education - Aprende y Transforma tu Futuro">
+    <meta name="twitter:description" content="Accede a educación personalizada con nuestros cursos prácticos y modernos. ¡Inscríbete hoy!">
+    <meta name="twitter:image" content="/assets/images/social-preview.jpg">
+
+    <title>Dinamic Education - Aprende y Transforma tu Futuro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -31,6 +47,7 @@
     <div id="header"></div>
 
     <!-- Hero Section -->
+    <h1 class="sr-only">Dinamic Education - Aprende Programación de Forma Personalizada</h1>
     <div id="hero"></div>
 
     <!-- Modalities Section -->
@@ -38,7 +55,6 @@
 
     <!-- Advantages Section -->
     <div id="advantages"></div>
-
 
     <!-- Courses Section -->
     <div id="courses"></div>
@@ -53,16 +69,28 @@
     <div id="footer"></div>
 
     <script>
-        // Dynamically load sections
-        const sections = [
-            'header', 'hero', 'modalities', 'advantages', 'courses', 'mission', 'contact', 'footer'
-        ];
+        // Loader
+        const showLoader = (section) => {
+            document.getElementById(section).innerHTML = `<div class='text-center py-10'><p>Cargando ${section}...</p></div>`;
+        };
+
+        // Dynamically load sections with error handling
+        const sections = ['header', 'hero', 'modalities', 'advantages', 'courses', 'mission', 'contact', 'footer'];
 
         sections.forEach(section => {
+            showLoader(section);
             fetch(`${section}.html`)
-                .then(response => response.text())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Error al cargar la sección ${section}`);
+                    }
+                    return response.text();
+                })
                 .then(data => document.getElementById(section).innerHTML = data)
-                .catch(error => console.error(`Error loading ${section}:`, error));
+                .catch(error => {
+                    console.error(error);
+                    document.getElementById(section).innerHTML = `<div class='text-center py-10 text-red-500'>No se pudo cargar la sección ${section}. Por favor, intenta de nuevo más tarde.</div>`;
+                });
         });
     </script>
 </body>

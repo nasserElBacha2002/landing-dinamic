@@ -1,34 +1,17 @@
 <header class="fixed top-0 w-full z-50 bg-gradient-to-r from-[#508347] to-[#77B093] shadow-md text-white">
     <div class="container mx-auto flex items-center justify-between px-4 py-3">
         <h1 class="text-2xl font-bold tracking-wide">
-            Dinamic Education
+            <a href="#hero" class="hover:text-[#C5D1CD] transition duration-300">Dinamic Education</a>
         </h1>
 
-        <nav class="hidden md:flex space-x-6">
+        <nav class="hidden md:flex space-x-6" role="navigation" aria-label="Main Navigation">
             <a href="#hero" class="text-lg hover:text-[#77B093] transition duration-300">Inicio</a>
             <a href="#modalities" class="text-lg hover:text-[#77B093] transition duration-300">Modalidades</a>
             <a href="#advantages" class="text-lg hover:text-[#77B093] transition duration-300">Ventajas</a>
             <a href="#courses" class="text-lg hover:text-[#77B093] transition duration-300">Cursos</a>
             <a href="#contact" class="text-lg hover:text-[#77B093] transition duration-300">Contacto</a>
         </nav>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden bg-white text-gray-800">
-        <ul class="flex flex-col space-y-4 p-6">
-            <li><a href="#hero" class="text-lg hover:text-[#508347] transition duration-300">Inicio</a></li>
-            <li><a href="#modalities" class="text-lg hover:text-[#508347] transition duration-300">Modalidades</a></li>
-            <li><a href="#advantages" class="text-lg hover:text-[#508347] transition duration-300">Ventajas</a></li>
-            <li><a href="#courses" class="text-lg hover:text-[#508347] transition duration-300">Cursos</a></li>
-            <li><a href="#contact" class="text-lg hover:text-[#508347] transition duration-300">Contacto</a></li>
-        </ul>
-    </div>
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('block');
-        });
-    </script>
+    </div>
+
 </header>

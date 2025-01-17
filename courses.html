@@ -1,59 +1,63 @@
-<section id="courses" class="py-20 bg-gradient-to-b from-white to-[#f1f5f9]  text-gray-800">
+<section id="courses" class="py-20 bg-gradient-to-b from-white to-[#f1f5f9] text-gray-800">
     <div class="container mx-auto text-center px-8 md:px-16">
         <h3 class="text-4xl font-extrabold mb-12 text-[#508347]">Cursos Disponibles</h3>
+        <p class="text-lg text-gray-600 mb-8">Todos nuestros cursos tienen el mismo costo, ¡elige el que más se adapte a tus objetivos!</p>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <!-- Curso 1 -->
-            <div class="relative bg-white text-[#508347] rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out">
-                <img src="https://via.placeholder.com/400x200" alt="Fundamentos de Programación" class="w-full h-48 object-cover">
-                <div class="p-8">
+            <!-- Curso 1: Fundamentos de Programación -->
+            <div class="relative bg-white text-[#508347] rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out border-4 border-[#508347] flex flex-col justify-between">
+                <img src="./images/idea.png" alt="Fundamentos de Programación" class="w-full h-48 object-cover">
+                <div class="p-8 flex-grow">
                     <h4 class="text-2xl font-bold mb-4">Fundamentos de Programación</h4>
-                    <p class="text-gray-600 text-base mb-6">Domina los conceptos básicos de la programación con un enfoque práctico y moderno.</p>
+                    <p class="text-gray-600 text-base mb-6">Domina los conceptos básicos de la programación con un enfoque práctico y moderno. Ideal para principiantes que buscan comenzar su carrera tecnológica.</p>
                     <ul class="text-gray-500 text-sm list-disc list-inside mb-6">
-                        <li>Duración: 6 semanas</li>
-                        <li>Modalidad: Remota</li>
+                        <li>Duración estimada: 4 meses</li>
+                        <li>Modalidad: 100% remota</li>
                         <li>Nivel: Principiante</li>
                     </ul>
-                    <a href="#contact" class="block bg-[#508347] text-white text-center py-3 px-4 rounded-lg font-bold hover:bg-[#406936] transition duration-300">
-                        Inscribirme
-                    </a>
                 </div>
-                <div class="absolute top-0 right-0 bg-[#508347] text-white text-sm px-4 py-2 rounded-bl-lg shadow-md">Nuevo</div>
+                <div class="flex gap-4 justify-center mb-6">
+                    <a href="#contact" class="block bg-[#508347] text-white text-center py-3 px-4 rounded-lg font-bold hover:bg-[#406936] transition duration-300">Inscribirme</a>
+                    <a href="/pdfs/fundamentos.pdf" target="_blank" class="block bg-gray-200 text-[#508347] text-center py-3 px-4 rounded-lg font-bold hover:bg-gray-300 transition duration-300">Más Información</a>
+                </div>
+                <div class="absolute top-0 right-0 bg-[#508347] text-white text-sm px-4 py-2 rounded-bl-lg shadow-md">Destacado</div>
             </div>
 
-            <!-- Curso 2 -->
-            <div class="relative bg-white text-[#508347] rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out">
-                <img src="https://via.placeholder.com/400x200" alt="Desarrollo Backend" class="w-full h-48 object-cover">
-                <div class="p-8">
+            <!-- Curso 2: Desarrollo Backend -->
+            <div class="relative bg-white text-[#508347] rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out flex flex-col justify-between">
+                <img src="./images/tools.jpg" alt="Desarrollo Backend" class="w-full h-48 object-cover">
+                <div class="p-8 flex-grow">
                     <h4 class="text-2xl font-bold mb-4">Desarrollo Backend</h4>
-                    <p class="text-gray-600 text-base mb-6">Aprende a construir aplicaciones modernas conectando clientes y servidores usando APIs.</p>
+                    <p class="text-gray-600 text-base mb-6">Aprende a construir aplicaciones modernas conectando clientes y servidores usando APIs. ¡Una habilidad esencial para desarrolladores intermedios!</p>
                     <ul class="text-gray-500 text-sm list-disc list-inside mb-6">
-                        <li>Duración: 8 semanas</li>
-                        <li>Modalidad: Remota</li>
-                        <li>Nivel: Intermedio</li>
+                        <li>Duración estimada: 3 meses</li>
+                        <li>Modalidad: 100% remota</li>
+                        <li>Nivel: Principiante</li>
                     </ul>
-                    <a href="#contact" class="block bg-[#508347] text-white text-center py-3 px-4 rounded-lg font-bold hover:bg-[#406936] transition duration-300">
-                        Inscribirme
-                    </a>
                 </div>
-                <div class="absolute top-0 right-0 bg-[#508347] text-white text-sm px-4 py-2 rounded-bl-lg shadow-md">Recomendado</div>
+                <div class="flex gap-4 justify-center mb-6">
+                    <a href="#contact" class="block bg-[#508347] text-white text-center py-3 px-4 rounded-lg font-bold hover:bg-[#406936] transition duration-300">Inscribirme</a>
+                    <a href="/pdfs/backend.pdf" target="_blank" class="block bg-gray-200 text-[#508347] text-center py-3 px-4 rounded-lg font-bold hover:bg-gray-300 transition duration-300">Más Información</a>
+                </div>
+                <div class="absolute top-0 right-0 bg-[#FFD700] text-black text-sm px-4 py-2 rounded-bl-lg shadow-md">Próximamente</div>
             </div>
 
-            <!-- Curso 3 -->
-            <div class="relative bg-white text-[#508347] rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out">
-                <img src="https://via.placeholder.com/400x200" alt="Frontend Avanzado" class="w-full h-48 object-cover">
-                <div class="p-8">
-                    <h4 class="text-2xl font-bold mb-4">Frontend Avanzado</h4>
-                    <p class="text-gray-600 text-base mb-6">Consolida tus conocimientos en diseño y desarrollo de interfaces interactivas y responsivas.</p>
+            <!-- Curso 3: Desarrollo Frontend -->
+            <div class="relative bg-white text-[#508347] rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out flex flex-col justify-between">
+                <img src="./images/monitor.jpg" alt="Desarrollo Frontend" class="w-full h-48 object-cover">
+                <div class="p-8 flex-grow">
+                    <h4 class="text-2xl font-bold mb-4">Desarrollo Frontend</h4>
+                    <p class="text-gray-600 text-base mb-6">Aprende a diseñar y desarrollar interfaces web interactivas y responsivas con herramientas modernas. ¡Crea experiencias que cautivan!</p>
                     <ul class="text-gray-500 text-sm list-disc list-inside mb-6">
-                        <li>Duración: 10 semanas</li>
-                        <li>Modalidad: Remota</li>
-                        <li>Nivel: Avanzado</li>
+                        <li>Duración estimada: 3 meses</li>
+                        <li>Modalidad: 100% remota</li>
+                        <li>Nivel: Principiante</li>
                     </ul>
-                    <a href="#contact" class="block bg-[#508347] text-white text-center py-3 px-4 rounded-lg font-bold hover:bg-[#406936] transition duration-300">
-                        Inscribirme
-                    </a>
                 </div>
-                <div class="absolute top-0 right-0 bg-[#508347] text-white text-sm px-4 py-2 rounded-bl-lg shadow-md">Avanzado</div>
+                <div class="flex gap-4 justify-center mb-6">
+                    <a href="#contact" class="block bg-[#508347] text-white text-center py-3 px-4 rounded-lg font-bold hover:bg-[#406936] transition duration-300">Inscribirme</a>
+                    <a href="/pdfs/frontend.pdf" target="_blank" class="block bg-gray-200 text-[#508347] text-center py-3 px-4 rounded-lg font-bold hover:bg-gray-300 transition duration-300">Más Información</a>
+                </div>
+                <div class="absolute top-0 right-0 bg-[#FFD700] text-black text-sm px-4 py-2 rounded-bl-lg shadow-md">Próximamente</div>
             </div>
         </div>
     </div>
